@@ -13,8 +13,8 @@ public class WordFrequency {
         System.out.println(" - - TASK #3 - -");
         HashMap<String, Integer> map = new HashMap<String, Integer>();
         List<String> lines = Files.readAllLines(Paths.get(fileName));
-        for (int i=0; i< lines.size()-1; i++){
-            String[] words = lines.get(i+1).split(" ");
+        for (int i=0; i< lines.size(); i++){
+            String[] words = lines.get(i).split(" ");
             for (String word: words) {
                 Integer integer = map.get(word);
                 if(integer == null) {
